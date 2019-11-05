@@ -48,6 +48,55 @@ let purchases = [{
         customerName: 'Mandy DeLuca',
         total: '415.00'
     },
+    {
+        tranactionID: 8,
+        date: '10/01/2019',
+        customerNumber: '0000987641535',
+        customerName: 'Misty Burkett',
+        total: '$263.00',
+    },
+    {
+        transactionID: 9,
+        date: '10/01/2019',
+        customerNumber: '0000987641536',
+        customerName: 'Alision Stewart',
+        total: '$25.00',
+    },
+    {
+        transactionID: 10,
+        date: '10/03/2019',
+        customerNumber: '0000987641537',
+        customerName: 'Jill Ayers',
+        total: '137.00'
+    },
+    {
+        tranactionID: 11,
+        date: '10/04/2019',
+        customerNumber: '0000987641535',
+        customerName: 'Misty Burkett',
+        total: '$427.00',
+    },
+    {
+        transactionID: 12,
+        date: '10/05/2019',
+        customerNumber: '0000987641536',
+        customerName: 'Alision Stewart',
+        total: '$183.00',
+    },
+    {
+        transactionID: 13,
+        date: '10/08/2019',
+        customerNumber: '0000987641537',
+        customerName: 'Jill Ayers',
+        total: '214.00'
+    },
+    {
+        transactionID: 14,
+        date: '10/08/2019',
+        customerNumber: '0000987641535',
+        customerName: 'Misty Burkett',
+        total: '73.00'
+    }
     ],
     November: [{
         tranactionID: 1,
@@ -98,6 +147,27 @@ let purchases = [{
         customerName: 'Jane Doe',
         total: '64.00'
     },
+    {
+        tranactionID: 8,
+        date: '11/29/2019',
+        customerNumber: '0000987641535',
+        customerName: 'Misty Burkett',
+        total: '$523.00',
+    },
+    {
+        transactionID: 9,
+        date: '11/30/2019',
+        customerNumber: '0000987641536',
+        customerName: 'Alision Stewart',
+        total: '$132.00',
+    },
+    {
+        transactionID: 10,
+        date: '11/30/2019',
+        customerNumber: '0000987641537',
+        customerName: 'Jill Ayers',
+        total: '142.00'
+    }
     ],
     December: [{
         tranactionID: 1,
@@ -175,7 +245,28 @@ let purchases = [{
         customerNumber: '0000987641532',
         customerName: 'Jane Doe',
         total: '105.00'
-    }]
+    },
+    {
+        tranactionID: 12,
+        date: '12/24/2019',
+        customerNumber: '0000987641535',
+        customerName: 'Misty Burkett',
+        total: '$117.00',
+    },
+    {
+        transactionID: 13,
+        date: '12/26/2019',
+        customerNumber: '0000987641536',
+        customerName: 'Alision Stewart',
+        total: '$193.00',
+    },
+    {
+        transactionID: 14,
+        date: '12/26/2019',
+        customerNumber: '0000987641537',
+        customerName: 'Jill Ayers',
+        total: '63.00'
+    },]
 }];
 
 export default purchases;
