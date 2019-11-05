@@ -40,8 +40,6 @@ function App() {
     let calculateTotals = (sortedArray) => {
         let totalPoints = 0;
         let pointTotals = {};
-        //   let customersTotalPoints = [];
-
         let sortedByCustomerNumber = sortedArray.sort(enableSort);
 
         for (let i = 0; i < sortedByCustomerNumber.length; i++) {
@@ -75,9 +73,6 @@ function App() {
         let sortedArray = [];
         let sortedAndFlat = [];
 
-        // Add the points and sort the array by Customer Name
-
-
         for (let purchase of purchases) {
 
             for (let month in purchase) {
@@ -95,12 +90,7 @@ function App() {
         calculateTotals(sortedAndFlat);
 
     }
-
-    const columns = ['Customer Number', 'Customer Name', 'Total Points'];
-
-
-
-
+    
     sortTheArray();
 
 
