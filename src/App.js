@@ -4,8 +4,6 @@ import purchases from './data';
 
 function App() {
     const customersTotalPoints = [];
-
-
     let points = (total) => {
         let totalPointsEarned = 0;
         if (total > 50 && total < 100) {
@@ -14,15 +12,6 @@ function App() {
             totalPointsEarned = Math.floor(total - 100) * 2 + 50;
             return totalPointsEarned;
         }
-    }
-
-    let createTable = (points) => {
-        if (points) {
-            points.map(customer => {
-                return <div><p>{customer.customerName}</p><p>{customer.customerNumber}{customer.totalPoints}</p></div>
-            });
-        }
-
     }
 
     let enableSort = (a, b) => {
@@ -55,9 +44,7 @@ function App() {
 
                     if (i === sortedByCustomerNumber.length) {
                         pointTotals = { customerName: sortedByCustomerNumber[i - 1].customerName, customerNumber: sortedByCustomerNumber[i - 1].customerNumber, totalPoints };
-                        customersTotalPoints.push(pointTotals);
-                        createTable(customersTotalPoints);
-                        return
+                        return customersTotalPoints.push(pointTotals);
                     }
                 }
                 pointTotals = { customerName: sortedByCustomerNumber[i - 1].customerName, customerNumber: sortedByCustomerNumber[i - 1].customerNumber, totalPoints };
@@ -81,12 +68,14 @@ function App() {
                 }
 
                 let sorted = purchase[month].sort(enableSort);
+
                 sortedArray.push(sorted);
 
             };
         };
 
         sortedAndFlat = [].concat.apply([], sortedArray);
+
         calculateTotals(sortedAndFlat);
 
     }
@@ -97,13 +86,12 @@ function App() {
 
     return (
 
-        <div class="table">
-            <div class="columns"><p class=" columns">Customer Number</p><p class="columns">Customer Name</p><p class="columns">Total Points</p></div>
-            <div>{customersTotalPoints.map(customer => {
-                return <div class="data"><p>{customer.customerNumber}</p><p>{customer.customerName}</p><p>{customer.totalPoints}</p></div>
-            })}</div>
+        <div className="table">
+            <div className="columns"><p className="columns">Customer Number</p><p className="columns">Customer Name</p><p className="columns">Total Points</p></div>
+            <div>{customersTotalPoints.map((customer, index) => {
+                return <div className="data" key={index}><p>{customer.customerNumber}</p><p>{customer.customerName}</p><p>{customer.totalPoints}</p></div>
+            })})</div>
         </div>
     );
-
 }
 export default App;
